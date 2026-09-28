@@ -4,11 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -n web,api -c green,blue \"vite --host 0.0.0.0\" \"node server/index.js\"",
-    "server": "node server/index.js",
+    "dev": "concurrently -n web,api -c green,blue \"vite --host 0.0.0.0\" \"node index.js\"",
+    "server": "node index.js",
     "client": "vite --host 0.0.0.0",
     "build": "vite build",
-    "start": "node server/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "react": "^18.3.1",
