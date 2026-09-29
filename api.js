@@ -18,9 +18,23 @@ async function callSheet(action, payload) {
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ action, ...payload })
   });
-  const body = await response.json();
-  if (body.success === false) throw new Error(body.message || 'Sheet request failed.');
-  return body;
+ const text = await response.text();
+
+console.log('Google Apps Script response:', text);
+
+let body;
+
+try {
+  body = JSON.parse(text);
+} catch (error) {
+  throw new Error(`Google Sheet returned: ${text.substring(0, 300)}`);
+}
+
+if (body.success === false) {
+  throw new Error(body.message || 'Sheet request failed.');
+}
+
+return body;
 }
 
 const useSheet = Boolean(API_BASE_URL);
