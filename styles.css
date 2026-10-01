@@ -124,12 +124,6 @@ th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--lin
 .badge { display: inline-block; border-radius: 999px; padding: 3px 8px; background: #e7f3ec; color: var(--green-dark); font-size: 12px; }
 .footer { padding: 28px 7vw 40px; color: var(--muted); font-family: "Segoe UI", sans-serif; font-size: 13px; }
 
-@media (max-width: 860px) {
-  .hero, .grid, .row { grid-template-columns: 1fr; }
-  .links { display: none; }
-  .links.open { display: flex; position: absolute; top: 68px; left: 5vw; right: 5vw; background: white; border: 1px solid var(--line); border-radius: 16px; padding: 10px; }
-  .menu { display: block; }
-}
 .request-submit {
   width: 100%;
   padding: 16px 24px;
@@ -168,5 +162,13 @@ th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--lin
   background: #94a3b8;
   cursor: not-allowed;
   transform: none;
+
+@media (max-width: 860px) {
+  .hero, .grid, .row { grid-template-columns: 1fr; }
+  .links { display: none; }
+  .links.open { display: flex; position: absolute; top: 68px; left: 5vw; right: 5vw; background: white; border: 1px solid var(--line); border-radius: 16px; padding: 10px; }
+  .menu { display: block; }
+}
+
   box-shadow: none;
 }
