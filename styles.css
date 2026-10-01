@@ -130,3 +130,43 @@ th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--lin
   .links.open { display: flex; position: absolute; top: 68px; left: 5vw; right: 5vw; background: white; border: 1px solid var(--line); border-radius: 16px; padding: 10px; }
   .menu { display: block; }
 }
+.request-submit {
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.18);
+}
+
+.request-submit:hover {
+  background: #0d5f59;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(15, 118, 110, 0.24);
+}
+
+.request-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.18);
+}
+
+.request-submit:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.25);
+  outline-offset: 3px;
+}
+
+.request-submit:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
